@@ -1,12 +1,15 @@
 # Hello there :)
+from data_loading import load_data
+
+
 DATA_PATH = './szwagropol_data/transactions.txt'
 
-with open(DATA_PATH, encoding='utf-8') as f:
-    rows = []
-    for line in f:
-        current_row = line.strip().split(';')
-        rows.append(current_row)
+columns, rows = load_data(DATA_PATH)
+
 
 for i in range(5):
     print(rows[i])
 
+
+class DataTable:
+    pass
