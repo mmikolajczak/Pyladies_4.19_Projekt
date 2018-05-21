@@ -1,3 +1,7 @@
+"""
+Moduł zawierający różne gotowe do zaimportowania i wykorzystania funkcje pomocnicze,
+które prawdopodobnie przydzadzą się w trakcie realizacji projeku.
+"""
 import datetime
 import smtplib
 
