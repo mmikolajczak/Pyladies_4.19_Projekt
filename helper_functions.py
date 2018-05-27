@@ -79,7 +79,7 @@ class GmailEmailSender:
         try:
             self.initialize_smtp()
             email_content = self.generate_message_content(*args, **kwargs)
-            self.server.sendmail(self.gmail_username, receiver_address, email_content)
+            self.server.sendmail(self.gmail_username, receiver_address, email_content.encode('utf-8'))
             self.terminate_smtp()
         except Exception:
             raise RuntimeError('Error during sending mail.')
